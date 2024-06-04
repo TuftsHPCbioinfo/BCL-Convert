@@ -5,7 +5,7 @@ FROM centos:7
 # https://support.illumina.com/downloads/bcl-convert-downloads.html
 ADD bcl-convert-4.2.7-2.el7.x86_64.rpm /opt/bcl-convert.rpm
 RUN yum install -y gdb && \
-    rpm -i /tmp/bcl-convert.rpm && \
+    rpm -i /opt/bcl-convert.rpm && \
     rm /opt/bcl-convert.rpm && \
     yum clean all && \
     rm -rf /var/cache/yum
